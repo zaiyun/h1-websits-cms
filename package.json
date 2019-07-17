@@ -1,0 +1,22 @@
+{
+  "name": "create-next-example-app",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "marked": "^0.7.0",
+    "next": "^9.0.0",
+    "next-routes": "^1.4.2",
+    "nprogress": "^0.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "storyblok-js-client": "^1.0.27",
+    "storyblok-react": "0.0.9"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "lin <zl1836@nyu.edu>",
+  "license": "MIT"
+}
