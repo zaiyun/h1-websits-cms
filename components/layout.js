@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from '../components/head'
 import Nav from '../components/nav'
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"></link>
 import StoryblokService from '../utils/storyblok-service'
 
 export default ({ children, settings = {} }) => (
