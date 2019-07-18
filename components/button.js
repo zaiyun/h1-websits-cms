@@ -14,7 +14,7 @@ render(){
     <div className="button">
         
          <Link route= {content.link.cached_url}prefetch>
-            <button>
+            <button className="button_button">
              {content.name}
              
              </button>
@@ -26,19 +26,20 @@ render(){
             </a>
           </Link>
         </div>
-         
+        
+        
          
         <div><hr className = "hr"></hr></div>
          
         
       <style jsx>{`
-       .button{
+       .button {
          text-align:center;
          border-color:#060364;
          
        }
        
-       .button button{
+       .button_button {
         border-color:#060364;
         margin:auto;
         background-color: #060364;
@@ -46,16 +47,16 @@ render(){
         width: 161px;
         color: #FFFFFF;
         border-radius: 2px;
-        box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.5)
-        
-      }
-      .button button{
+        box-shadow: 0px 5px 7px 0px rgba(0,0,0,0.5);
         line-height: 18px;
         font-size: 14px;
         font-weight: light;
         letter-spacing: 0.5px;
         font-family: 'Montserrat', sans-serif;
+        
+        
       }
+      
 
       .button button:hover{
         background-color:#000;
@@ -77,9 +78,11 @@ render(){
     height: 1px;
     width: 437px;
     border: 1px solid #D7D7D7;
-    margin-top:4.5%;
-      
+    margin-top:4.5%;  
     }
+    
+     
+
       `}</style>
     </div>
   </SbEditable>
