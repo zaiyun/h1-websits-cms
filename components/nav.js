@@ -17,7 +17,7 @@ export default class extends React.Component {
             </l1>
         <nav className="top-header__col">
           <ul className="top-header__nav">
-           
+          
             {settings && settings.content.main_navi.map((navitem, index) =>
                 <li key={index}>
                   <Link route={navitem.link.cached_url} prefetch>
@@ -27,9 +27,8 @@ export default class extends React.Component {
             )}
           </ul>
         </nav>
-
-        
-
+       
+              
         <nav className="top-header__col top-header__second-navi">
           <ul className="top-header__nav top-header__nav--right">
             <li>
@@ -41,16 +40,22 @@ export default class extends React.Component {
             
           </ul>
         </nav>
+        
+        
 
         <style jsx>{`
           .top-header {
+            
             background-color: #060464;
             padding-top: 30px;
             padding-bottom: 30px;
+            
+            
           }
           .top-header__col{
             margin-right: 200px;
             margin-left: 40px;
+            
           }
           .top-header__logo { 
             margin-left: 160px;
@@ -67,17 +72,18 @@ export default class extends React.Component {
             background-color: #FAB3A3;
             border-radius: 2px;
             color: #333333;
-            
             font-size: 14px;
             font-weight: 600;
             letter-spacing: 0.5px;
             line-height: 18px;
             text-align: center;
+            border-color: #FFFFFF;
+            border-width:.5px;
+            
           }
           }
           .top-header__second-navi {
             text-align: right;
-            
             margin-left: auto;
           }
           .top-header__nav {
@@ -103,11 +109,29 @@ export default class extends React.Component {
             text-decoration: none;
             border-bottom: 2px solid transparent;
             transition: border .15s ease;
+            mr-auto;
           }
           .top-header__link:hover {
             border-bottom: 2px solid #000;
           }
+          
+          .line {
+            box-sizing: border-box;
+            height: 2px;
+            width: 1695px;
+            border: 1px solid #ECF0F1;
+        }
+
+        
+        
+        
+        .top-header {
+      
+          border-bottom: 1px solid white;
+        }
+          
         `}</style>
+        
       </header>
      
     )
