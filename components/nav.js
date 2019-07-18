@@ -12,6 +12,7 @@ export default class extends React.Component {
     return (
       
       <header className="top-header util__flex util__container">
+        
       <l1 href="/" className=" top-header__logo">
               <l1>{settings.content.logo}</l1>
             </l1>
@@ -27,19 +28,35 @@ export default class extends React.Component {
             )}
           </ul>
         </nav>
-       
-              
+        
+        
+        
+          
         <nav className="top-header__col top-header__second-navi">
-          <ul className="top-header__nav top-header__nav--right">
-            <li>
-              <Link route="/en/blog"><a className="top-header__link">{settings.content.sign_in}</a></Link>
-            </li>
-            <li>
-              <Link route="/en/blog"><button className="top-header__link">{settings.content.demo_button}</button></Link>
+          <div>
+            <ul className="top-header__nav top-header__nav--right">
+          
+              <li>
+                <Link route="/en/blog"><a className="top-header__link">{settings.content.sign_in}</a></Link>
             </li>
             
-          </ul>
+            <li>
+            <Link route="/en/blog"><button className="top-header__link">{settings.content.demo_button}</button></Link>
+            </li>
+          
+        
+            
+        </ul>
+        
+        
+        </div>
+        
+       
+          
         </nav>
+        
+        
+        
         
         
 
@@ -49,13 +66,13 @@ export default class extends React.Component {
             background-color: #060464;
             padding-top: 30px;
             padding-bottom: 30px;
-            border-bottom: 1px solid white;
-            
+            border-bottom: 1px solid #ECF0F1;
             
           }
           .top-header__col{
             margin-right: 200px;
             margin-left: 40px;
+            white-space: nowrap;
             
           }
           .top-header__logo { 
@@ -78,14 +95,21 @@ export default class extends React.Component {
             font-weight: 600;
             letter-spacing: 0.5px;
             line-height: 15px;
-            text-align: center;
-            border-color: #FFFFFF;
+            text-align: center
             border-width:.5px;
             border-color:#FAB3A3;
             padding: 10px 15px 10px 15px;
+          }
 
+          .top-header button:hover{
+            background-color:#FFCDC1;
+            border-color:#FFCDC1;
+            transition: background .7s ease;
+            transition: border .7s ease;
             
           }
+
+
           }
           .top-header__second-navi {
             text-align: right;
@@ -115,24 +139,31 @@ export default class extends React.Component {
             border-bottom: 2px solid transparent;
             transition: border .15s ease;
             mr-auto;
+            font-weight:400;
           }
           .top-header__link:hover {
-            border-bottom: 2px solid #000;
+            border-bottom: 2px solid white;
           }
           
+          .hr{
+            box-sizing: border-box;
+            height: 1px;
+            width: 437px;
+            border: 1px solid #D7D7D7;
+            margin-top:4.5%;
+          }
+
           .line {
             box-sizing: border-box;
-            height: 2px;
-            width: 1695px;
-            border: 1px solid #ECF0F1;
-        }
+            height: 1px;
+            width: -1695px;
+            border: 1px solid #ECF0F1;}
 
-        
-        
-        
+            
        
           
         `}</style>
+        
         
       </header>
      
