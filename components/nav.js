@@ -49,6 +49,7 @@ export default class extends React.Component {
             background-color: #060464;
             padding-top: 30px;
             padding-bottom: 30px;
+            border-bottom: 1px solid white;
             
             
           }
@@ -125,10 +126,7 @@ export default class extends React.Component {
         
         
         
-        .top-header {
-      
-          border-bottom: 1px solid white;
-        }
+       
           
         `}</style>
         
