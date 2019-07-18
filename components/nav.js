@@ -73,13 +73,17 @@ export default class extends React.Component {
             background-color: #FAB3A3;
             border-radius: 2px;
             color: #333333;
-            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
             font-weight: 600;
             letter-spacing: 0.5px;
-            line-height: 18px;
+            line-height: 15px;
             text-align: center;
             border-color: #FFFFFF;
             border-width:.5px;
+            border-color:#FAB3A3;
+            padding: 10px 15px 10px 15px;
+
             
           }
           }
