@@ -1,5 +1,4 @@
 import React from 'react'
-import Components from './index'
 import SbEditable from 'storyblok-react'
 
 export default class extends React.Component {
@@ -10,13 +9,6 @@ export default class extends React.Component {
     }
     
   }
-  // resizedIcon(index) {
-  //   const { content } = this.props
-  //   if (typeof content.icons !== 'undefined') {
-  //     return content.icon.replace('//a.storyblok.com', '//img2.storyblok.com/50x50')
-  //   }
-  //   return null
-  // }
 
   icon() {
     let icons = this.props.content.body.filter((icon, index) => {
@@ -34,8 +26,9 @@ export default class extends React.Component {
             position: 'relative',
             paddingBottom:'10px',
             fontSize:'16px',
+            color :'#333333',
         }
-      
+    
       
     if(bool == true){
     return(
@@ -78,8 +71,6 @@ export default class extends React.Component {
           </p>
        
          <ul>
-            
-             
          {this.bullet_points(array,bool)}
         </ul>
          
@@ -98,9 +89,9 @@ export default class extends React.Component {
             
             .detail ul{
                 padding-left: 20px;
-                
-                
             }
+            
+
             .detail ul li::before{
                 
                 content:"•";
@@ -127,6 +118,7 @@ export default class extends React.Component {
             }
             
             .detail p{
+              color: #333333;
               font-size: 16px;	
               line-height: 26px;
               
