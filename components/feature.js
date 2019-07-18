@@ -41,13 +41,20 @@ export default class extends React.Component {
             {content.description}
           </div>
           {/* <img src={this.resizedIcon()} className="feature__icon" /> */}
-         
+        
+
+
           <style jsx>{`
             .feature {
-              text-align: center;
-              padding: 30px 10px 20px;
+              text-align: ${content.text_align} ;
+              padding: ${content.top_padding} 20px ${content.bottom_padding};
+             
+              
             }
-
+            .feature div{
+              margin-left: ${content.left_padding};
+              margin-right: ${content.right_padding};
+            }
             .feature__icon {
               max-width: 800px;
             }

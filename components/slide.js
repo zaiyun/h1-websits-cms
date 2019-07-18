@@ -25,10 +25,12 @@ export default class extends React.Component {
         .slide img {
           opacity: 0.8;
           display: block;
-          margin-left: auto;
-          margin-right: auto;
+          margin-top: ${content.top_margin};
+          margin-bottom:${content.bottom_margin};
+          margin-left: ${content.left_margin};
+          margin-right: ${content.right_margin};
           text-align:center;
-          width: 45%;
+          width: ${content.width};
           
           max-height: 700px;
           vertical-align:middle

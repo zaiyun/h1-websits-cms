@@ -6,7 +6,8 @@ import Grid from './grid'
 import Slide from './slide'
 import Nav from './nav'
 import Icon from './icon'
-import Button from './button';
+import Button from './button'
+import Detail from './detail'
 
 const Components = {
   'teaser': Teaser,
@@ -17,6 +18,7 @@ const Components = {
   'nav' : Nav,
   'icon':Icon,
   'button':Button,
+  'detail':Detail,
 }
 
 export default (blok) => {

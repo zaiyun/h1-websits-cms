@@ -9,5 +9,11 @@ export default (props) => (
         Components(blok)
       )}
     </div>
+    <style jsx>{`
+    .util__flex{
+      padding-bottom: ${props.content.bottom_padding};
+      padding-top: ${props.content.top_padding};
+    }
+    `}</style>
   </SbEditable>
 )
