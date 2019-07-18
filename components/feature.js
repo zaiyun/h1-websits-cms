@@ -1,6 +1,7 @@
 import React from 'react'
 import Components from './index'
 import SbEditable from 'storyblok-react'
+import ReactMarkdown from 'react-markdown'
 
 export default class extends React.Component {
   constructor(props) {
@@ -9,13 +10,6 @@ export default class extends React.Component {
       currentIcon: 0
     }
   }
-  // resizedIcon(index) {
-  //   const { content } = this.props
-  //   if (typeof content.icons !== 'undefined') {
-  //     return content.icon.replace('//a.storyblok.com', '//img2.storyblok.com/50x50')
-  //   }
-  //   return null
-  // }
 
   icon() {
     let icons = this.props.content.body.filter((icon, index) => {
@@ -35,29 +29,38 @@ export default class extends React.Component {
       <SbEditable content={content}>
         
         <div className="feature util__flex-eq">
-          {/* {this.icon() ? Components(this.icon()) : ''} */}
           <h2>{content.name}</h2>
-          <div className="feature__description">
-            {content.description}
-          </div>
-          {/* <img src={this.resizedIcon()} className="feature__icon" /> */}
-        
-
-
+          <p className="feature_discription">
+          <ReactMarkdown source={content.description} />
+          </p>
+          
           <style jsx>{`
             .feature {
+              margin: auto;
               text-align: ${content.text_align} ;
               padding: ${content.top_padding} 20px ${content.bottom_padding};
-             
-              
+              line-height: 26px;
+              margin-left: ${content.feature_left_padding};
+              margin-right: ${content.feature_right_padding};
             }
-            .feature div{
+            .feature h2{
+              font-size: 26px;	
+              font-weight: 500;	
+              line-height: 32px;
+              max-width: ${content.title_max_width};
+             
+            }
+
+            .feature p{
+              color: #333333;
+              margin: ${content.margin};
+              font-size:16px;
+              line-height: 26px;
+              max-width: ${content.discription_max_width};
               margin-left: ${content.left_padding};
               margin-right: ${content.right_padding};
             }
-            .feature__icon {
-              max-width: 800px;
-            }
+
           `}</style>
           
         </div>
