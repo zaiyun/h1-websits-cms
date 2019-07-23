@@ -69,8 +69,6 @@ render(){
       }
 
       .lm{ 
-        
-        color: #0AAACD;
         font-family: Montserrat;
         font-size: 14px;
         font-weight: 600;
@@ -78,17 +76,11 @@ render(){
         line-height: 18px;
         text-align: center;
         padding:20px;
-        
-        
-        
+        color: #0AAACD; 
       }
 
       .lm:hover {
         text-decoration:underline;
-        border-color:#0AAACD;
-        transition: background 1s ease;
-        transition: border 1s ease;
-        
       }
 
       .hr{
