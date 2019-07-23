@@ -28,21 +28,21 @@ export default class extends React.Component {
       <style jsx>{`
         .contact{
             text-align: left;
-            padding-top:70px;
-            
+            padding-top:0px;
+            margin:auto;
+            margin-left:0px;
             padding-left: ${content.left_padding};
-            padding-right: ${content.right_padding};
-            max-width:600px;
-            
-            height: 200px;
+            padding-right: 5%;
+            max-width:800px;
             
             
         }
         .contact input{
+            margin:left;
             border-width:0px;
             border-bottom: 1px solid rgba(0,0,0,0.12);
             margin-bottom: 10px;
-            width: 500px;
+            width:470px; 
             font-size: 16px;
         }
         .contact input:focus{

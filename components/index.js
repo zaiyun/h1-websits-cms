@@ -9,6 +9,7 @@ import Icon from './icon'
 import Button from './button'
 import Detail from './detail'
 import Contact from './contacts'
+import Footer from './footer'
 
 const Components = {
   'teaser': Teaser,
@@ -21,6 +22,7 @@ const Components = {
   'button':Button,
   'detail':Detail,
   'contact':Contact,
+  'footer': Footer,
 }
 
 export default (blok) => {

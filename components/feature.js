@@ -36,12 +36,13 @@ export default class extends React.Component {
           
           <style jsx>{`
             .feature {
-              margin: auto;
-              text-align: ${content.text_align} ;
-              padding: ${content.top_padding} 20px ${content.bottom_padding};
-              line-height: 26px;
-              margin-left: ${content.feature_left_padding};
-              margin-right: ${content.feature_right_padding};
+              text-align: ${content.text_align};
+              padding: ${content.top_padding} 20px ${content.bottom_padding}; 
+              padding-left: ${content.feature_left_padding};
+              padding-right: ${content.feature_right_padding};
+              max-width:${content.max_width};
+              min-width:${content.min_width};
+              margin:auto;
             }
             .feature h2{
               font-size: 26px;	
