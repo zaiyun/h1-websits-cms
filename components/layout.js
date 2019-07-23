@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from '../components/head'
 import Nav from '../components/nav'
+import Footer from '../components/footer'
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"></link>
 import StoryblokService from '../utils/storyblok-service'
 
@@ -12,7 +13,7 @@ export default ({ children, settings = {} }) => (
     <div className="util__container">
       {children}
     </div>
-
+    <Footer settings={settings}/>
     <style jsx global>{`
       article, aside, footer, header, hgroup, main, nav, section {
         display: block;
@@ -28,6 +29,7 @@ export default ({ children, settings = {} }) => (
       }
 
       .util__flex {
+        
         display: flex;
         justify-content: center;
         padding-top: 25px;

@@ -20,16 +20,6 @@ export default class extends React.Component {
     return null
   }
 
-  // pagClass(index) {
-  //   return 'teaser__pag-dot ' + (index == this.state.currentSlide ? 'teaser__pag-dot--current' : '')
-  // }
-
-  // handleDotClick(index) {
-  //   this.setState({
-  //     currentSlide: index
-  //   })
-  // }
-
   render() {
     const { content } = this.props
     return (
@@ -37,35 +27,49 @@ export default class extends React.Component {
         <div className="teaser">
           {this.slide() ? Components(this.slide()) : ''}
           <div>
+            <p className = "teaser_headline1">
             {content.headline1}
-            <h2>
+            </p>
+            <p className = "teaser_headline2">
               {content.headline2}
-            </h2>
+            </p>
          </div>
 
           <style jsx>{`
              .teaser{
               background-color: #060464;
+              padding-top:20px;
              }
              .teaser div{
               text-align: center;
-              font-size: 42px;	
-              line-height: 52px;
               position: absolute;
-              top: 20%;
+              top: 25%;
               color: #FFFFFF;
+              
               left:0;
               width: 100%
             }
-    
-            .teaser h2{
-              font-size: 26px;	
-              font-weight: 600;
-              text-align: center;
-              position: absolute;
-              color: #FFFFFF;
-              left:0;
-              width: 100%;
+            .teaser_headline1 {   
+                color: #FFFFFF;
+                font-family: Montserrat, sans-serif;
+                font-size: 42px;
+                line-height: 52px;
+                margin:auto;
+                text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+              
+            }
+            .teaser_headline2{
+           
+                margin:auto;
+                color: #FFFFFF;
+                font-family: Montserrat, sans-serif;
+                font-size: 26px;
+                font-weight: 540;
+                line-height: 32px;
+                max-width: 540px;
+                text-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+              
+              
             } 
             
           `}</style>
