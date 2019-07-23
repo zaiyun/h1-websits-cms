@@ -76,11 +76,15 @@ render(){
         line-height: 18px;
         text-align: center;
         padding:20px;
-        color: #0AAACD; 
+        color: #0AAACD;
+        
+        
+        
       }
 
-      .lm:hover {
-        text-decoration:underline;
+      .a:hover {
+        border-bottom: 2px solid;
+        border-color:#OAAACD;
       }
 
       .hr{
