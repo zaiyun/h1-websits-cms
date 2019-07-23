@@ -11,17 +11,44 @@ export default class extends React.Component {
     const { settings } = this.props
     return (
       
-      <div className="table">
-        <div className="table-row">
-        <div className="table-head">Table Header</div>
-        <div className="table-head">Table Header</div>
-        <div className="table-head">Table Header</div>
-     </div>
-     <div className="table-row">
-        <div className="table-cell">Table Cell</div>
-        <div className="table-cell">Table Cell</div>
-        <div className="table-cell">Table Cell</div>
-     </div>
+      <div className="footer">
+       <div className="logo-text">
+              H1.
+      </div>
+        <div className="table"> 
+              <div className="table-head">
+                  Solutions
+                  <div className="table-row">
+                  H1.Curie - Opinion Leader Platform
+                  </div>
+              </div>
+              <div className="table-head">Company
+                  <div className="table-row">
+                    Blog
+                    </div>
+                    <div className="table-row">
+                    Hi
+                    </div>
+                    <div className="table-row">
+                    About
+                    </div>
+                    <div className="table-row">
+                    Press
+                    </div>
+                    <div className="table-row">
+                    Yo
+                    </div>
+                  </div>
+            <div className="table-head">Legal
+            
+                <div className="table-row">
+                  Terms of Use
+                </div>
+
+                </div>
+        
+       
+       </div>
         
         
         
@@ -30,21 +57,56 @@ export default class extends React.Component {
         
 
         <style jsx>{`
-       .table{
-        display: table;
-        width:100%;
-        border-collapse:collapse;
+  
+        .footer{
+          position: relative;
+          height: 328px;
+          background-color: #060464;
+          overflow: hidden; 
+          
         }
-      .table-row{
-          display: table-row;
-        }
-      .table-cell, .table-head{
-            display: table-cell;
-            padding:1em;
-            border:#f0f0f0 1px solid;
+        @media (max-width: 768px) {
+          .logo-text{
+            display:none;
           }
+        }
+        .logo-text{
+          float:left;
+          position: relative;
+          color: #FFFFFF;
+          font-size: 75px;
+          font-weight: bold;
+          top:17%;
+          margin:auto;
+          margin-left:20%;
+          margin-right:30px;         
+        }
+       .table{  
+          top:20%;
+          position: relative;
+          color: #FFFFFF;
+          height: 50%;
+          margin-left:15%;
+          width:auto;
+          border-collapse:collapse;
+          }
+      .table-row{
+          color: #FFFFFF;
+          padding-right:100px;
+          margin-top:7px;
+          font-size: 12px;
+          font-weight: 500;
+          letter-spacing: 1.7px;
+          line-height: 15px;
+        }
       .table-head{
-           font-weight:bold;
+            
+            color: #DEDEDE;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1.7px;
+            line-height: 15px;
+            display: table-cell;     
           }
           
         `}</style>

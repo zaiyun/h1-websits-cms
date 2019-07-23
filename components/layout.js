@@ -9,7 +9,7 @@ export default ({ children, settings = {} }) => (
   <div>
     <Head />
     <Nav settings={settings} />
-    
+
     <div className="util__container">
       {children}
     </div>

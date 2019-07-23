@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from '../routes'
 import SbEditable from 'storyblok-react'
-
+import Dropdown from './dropdown'
 export default class extends React.Component {
   constructor(props) {
     super(props)
@@ -21,6 +21,7 @@ export default class extends React.Component {
           
             {settings && settings.content.main_navi.map((navitem, index) =>
                 <li key={index}>
+                  <Dropdown/>
                   <Link route={navitem.link.cached_url} prefetch>
                     <a className="top-header__link">{navitem.name}</a>
                   </Link>
@@ -43,16 +44,9 @@ export default class extends React.Component {
             <li>
             <Link route="/en/blog"><button className="top-header__link">{settings.content.demo_button}</button></Link>
             </li>
-          
-        
-            
         </ul>
-        
-        
         </div>
         
-       
-          
         </nav>
         
         
@@ -64,8 +58,8 @@ export default class extends React.Component {
           .top-header {
             
             background-color: #060464;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            padding-top: 20px;
+            padding-bottom: 10px;
             border-bottom: 1px solid #ECF0F1;
             
           }
@@ -166,7 +160,8 @@ export default class extends React.Component {
         
         
       </header>
-     
+      
+      
     )
   }
 }

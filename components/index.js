@@ -10,6 +10,7 @@ import Button from './button'
 import Detail from './detail'
 import Contact from './contacts'
 import Footer from './footer'
+import Dropdown from './dropdown'
 
 const Components = {
   'teaser': Teaser,
@@ -23,6 +24,7 @@ const Components = {
   'detail':Detail,
   'contact':Contact,
   'footer': Footer,
+  'dropdown': Dropdown,
 }
 
 export default (blok) => {
