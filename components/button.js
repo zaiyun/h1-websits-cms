@@ -21,7 +21,7 @@ render(){
              </Link>
          <div className="lm"> 
            <Link>
-            <a>
+            <a className="a" href="/">
             Learn more
             </a>
           </Link>
@@ -33,6 +33,8 @@ render(){
          
         
       <style jsx>{`
+       
+       
        .button {
          text-align:center;
          border-color:#060364;
@@ -61,8 +63,13 @@ render(){
       .button button:hover{
         background-color:#000;
       }
+      
+      .a{
+        text-decoration: none;
+      }
 
       .lm{ 
+        
         color: #0AAACD;
         font-family: Montserrat;
         font-size: 14px;
@@ -72,15 +79,26 @@ render(){
         text-align: center;
         padding:20px;
         
+        
+        
       }
-    .hr {
-    box-sizing: border-box;
-    height: 1px;
-    width: 437px;
-    border: 1px solid #D7D7D7;
-    margin-top:4.5%;  
-    }
+
+      .lm:hover {
+        text-decoration:underline;
+        border-color:#0AAACD;
+        transition: background 1s ease;
+        transition: border 1s ease;
+        
+      }
+
+      .hr{
+        box-sizing: border-box;
+        height: 1px;
+        width: 497px;
+        border: 1px solid #D7D7D7;
+      }
     
+
      
 
       `}</style>
