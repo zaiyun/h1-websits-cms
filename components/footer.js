@@ -15,49 +15,36 @@ export default class extends React.Component {
        <div className="logo-text">
               H1.
       </div>
-        <div className="table"> 
-              <div className="table-head">
-                  Solutions
-                  <div className="table-row">
-                  H1.Curie - Opinion Leader Platform
-                  </div>
-              </div>
-              <div className="table-head">Company
-                  <div className="table-row">
-                    Blog
-                    </div>
-                    <div className="table-row">
-                    Hi
-                    </div>
-                    <div className="table-row">
-                    About
-                    </div>
-                    <div className="table-row">
-                    Press
-                    </div>
-                    <div className="table-row">
-                    Yo
-                    </div>
-                  </div>
-            <div className="table-head">Legal
-            
-                <div className="table-row">
-                  Terms of Use
-                </div>
+        
+      <div className="table">
 
-                </div>
-        
+        {settings && settings.content.bottom_navi.map((column, index) =>
+                
+                  <div className="table-head">{column.head}
+                    {column.solutions.map((nav_item,index)=>
+                       <Link route={nav_item.link.cached_url} prefetch>
+                        <div className="table-row"><a className="nav_link">{nav_item.name}</a></div>
+                        </Link>
+                    )}
+                  </div>     
+            )}
+
+            </div>
+
        
-       </div>
-        
-        
-        
-        
-        
         
 
         <style jsx>{`
   
+        .nav_link {
+          text-decoration:none;
+        }
+
+        
+        .nav_link:hover {    
+          color: #FFFFFF;
+          
+        }
         .footer{
           position: relative;
           height: 328px;
@@ -70,6 +57,17 @@ export default class extends React.Component {
             display:none;
           }
         }
+        @media (max-width: 768px) {
+          .table{  
+            top:20%;
+            position: relative;
+            color: #FFFFFF;
+            height: 50%;
+            margin-left:10%;
+            width:auto;
+            border-collapse:collapse;
+            }
+        }
         .logo-text{
           float:left;
           position: relative;
@@ -81,19 +79,21 @@ export default class extends React.Component {
           margin-left:20%;
           margin-right:30px;         
         }
+        @media (min-width: 768px) {
        .table{  
           top:20%;
           position: relative;
           color: #FFFFFF;
           height: 50%;
-          margin-left:15%;
+          margin-left:34%;
           width:auto;
           border-collapse:collapse;
           }
+        }
       .table-row{
-          color: #FFFFFF;
+          color: #DEDEDE;
           padding-right:100px;
-          margin-top:7px;
+          margin-top:12px;
           font-size: 12px;
           font-weight: 500;
           letter-spacing: 1.7px;

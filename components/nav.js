@@ -13,18 +13,18 @@ export default class extends React.Component {
       
       <header className="top-header util__flex util__container">
         
-      <l1 href="/" className=" top-header__logo">
+        <l1 href="/" className=" top-header__logo">
               <l1>{settings.content.logo}</l1>
-            </l1>
+            </l1> 
         <nav className="top-header__col">
           <ul className="top-header__nav">
           
             {settings && settings.content.main_navi.map((navitem, index) =>
                 <li key={index}>
-                  <Dropdown/>
-                  <Link route={navitem.link.cached_url} prefetch>
-                    <a className="top-header__link">{navitem.name}</a>
-                  </Link>
+               
+                
+                    <a className="top-header__link">   <Dropdown  name = {navitem.name}/></a>
+                  
                 </li>
             )}
           </ul>
@@ -38,12 +38,16 @@ export default class extends React.Component {
             <ul className="top-header__nav top-header__nav--right">
           
               <li>
-                <Link route="/en/blog"><a className="top-header__link">{settings.content.sign_in}</a></Link>
-            </li>
             
-            <li>
-            <Link route="/en/blog"><button className="top-header__link">{settings.content.demo_button}</button></Link>
+                <Link route="/en/blog"><a className="top-header__link">{settings.content.sign_in}</a></Link>
+               
             </li>
+            <li>
+         
+            <Link route="/en/blog"><button className="top-header__link">{settings.content.demo_button}</button></Link>
+        </li>
+            
+
         </ul>
         </div>
         
@@ -66,10 +70,14 @@ export default class extends React.Component {
           .top-header__col{
             margin-right: 200px;
             margin-left: 40px;
+            margin-top:auto;
+            margin-bottom:auto;
             white-space: nowrap;
             
           }
           .top-header__logo { 
+            margin-top:auto;
+            margin-bottom:auto;
             margin-left: 160px;
             height: 24px;
             width: 30px;
@@ -80,19 +88,21 @@ export default class extends React.Component {
             line-height: 24px;
           }
           .top-header button{
-        
             background-color: #FAB3A3;
             border-radius: 2px;
             color: #333333;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Montserrat';
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 0.5px;
-            line-height: 15px;
-            text-align: center
+            line-height: 12px;
+          
             border-width:.5px;
+            
             border-color:#FAB3A3;
-            padding: 10px 15px 10px 15px;
+            height:34px;
+            width:124px;
+           
           }
 
           .top-header button:hover{
@@ -122,8 +132,11 @@ export default class extends React.Component {
             padding: 0 40px 0 0;
           }
           .top-header__nav--right li {
+            margin-top:auto;
+            margin-bottom:auto;
             padding-right: 0;
-            padding-left: 20px;
+            padding:auto;
+            padding-left: 40px;
           }
           .top-header__link {
             
@@ -132,7 +145,7 @@ export default class extends React.Component {
             text-decoration: none;
             border-bottom: 2px solid transparent;
             transition: border .15s ease;
-            mr-auto;
+            
             font-weight:400;
           }
           .top-header__link:hover {

@@ -5,7 +5,7 @@ import SbEditable from 'storyblok-react'
 class Dropdown extends React.Component {
     constructor(){
      super();
-    
+ 
      this.state = {
            displayMenu: false,
          };
@@ -18,25 +18,26 @@ class Dropdown extends React.Component {
     showDropdownMenu(event) {
         event.preventDefault();
         this.setState({ displayMenu: true }, () => {
-        document.addEventListener('click', this.hideDropdownMenu);
+        document.addEventListener('mouseover', this.hideDropdownMenu);
         });
       }
     
       hideDropdownMenu() {
         this.setState({ displayMenu: false }, () => {
-          document.removeEventListener('click', this.hideDropdownMenu);
+          document.removeEventListener('mouseover', this.hideDropdownMenu);
         });
     
       }
     
       render() {
+          
         return (
-            <div  className="dropdown"  >
-             <div className="button" onClick={this.showDropdownMenu}> My Setting </div>
-    
+            <div  className="dropdown" onMouseOver={this.showDropdownMenu} >
+             <div className="button" > {this.props.name} </div>
+                
               { this.state.displayMenu ? (
-              <ul>
-             <li><a className="active" href="#Create Page">Create Page</a></li>
+              <ul >
+             <li ><a className="active" href="#Create Page">Create Page</a></li>
              <li><a href="#Manage Pages">Manage Pages</a></li>
              <li><a href="#Create Ads">Create Ads</a></li>
              <li><a href="#Manage Ads">Manage Ads</a></li>
@@ -56,41 +57,51 @@ class Dropdown extends React.Component {
            .dropdown {
             position: relative;
             display: inline-block;
+            
        }
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            top:45px;
+            top:27px;
             right:0px;
-            width: 200px;
-            background-color: white;
-            font-weight:bold;
-            position: absolute;
-       
+            width: 100%;
+            background-color: #3b3e74;
+            
+            
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
            
+            line-height: 18px;
+            position: absolute;
             z-index: 1;
        }
         li a {
-            color: #000;
+            color: white;
             text-decoration: none;
        }
         li {
-            padding: 8px 16px;
+            padding-left:10px;
+            padding-right:10px;
+            padding-top: 8px;
            
        }
         li:last-child {
-            border-bottom: none;
+            padding-bottom: 8px;
+          
        }
         li:hover {
-           
+            background-color: #e5e5e5;
             color: white;
        }
         .button{
-            width:178px;
-            height:18px;
-            border-radius:5px;
-            font-weight:bold;
+            padding-left:10px;
+            padding-right:10px;
+            width:120px;
+            height:auto;
+            background-color: #060464;
+            border-radius:0px;
+            font-family: 'Montserrat', sans-serif;
             color:white;
        }
         .button:before{
@@ -98,12 +109,19 @@ class Dropdown extends React.Component {
             position:absolute;
             width:0px;
             height:0px;
-            border: 10px solid;
+            border: 7px solid;
             border-color: white transparent transparent transparent;
-            right:40px;
-           
-            top:8px;
+            right:10px;
+            top:10px;
+            
        }
+       .button:hover{
+            
+      
+        background-color: #3b3e74;
+        
+   }
+       
            `}
            </style>
            </div>

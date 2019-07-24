@@ -16,20 +16,19 @@ render(){
          <Link route= {content.link.cached_url}prefetch>
             <button className="button_button">
              {content.name}
-             
              </button>
              </Link>
          <div className="lm"> 
-           <Link>
-            <a className="a" href="/">
-            Learn more
+           <Link route= "/curie">
+            <a className="a" >
+            {content.button2}
             </a>
           </Link>
         </div>
         
         
-         
-        <div><hr className = "hr"></hr></div>
+         {content.borderline == true && <div><hr className = "hr"></hr></div>}
+        
          
         
       <style jsx>{`
@@ -91,6 +90,7 @@ render(){
       }
 
       .hr{
+        margin-top:50px;
         box-sizing: border-box;
         height: 1px;
         width: 497px;

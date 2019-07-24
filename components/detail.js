@@ -1,5 +1,6 @@
 import React from 'react'
 import SbEditable from 'storyblok-react'
+import ReactMarkdown from 'react-markdown'
 
 export default class extends React.Component {
   constructor(props) {
@@ -27,6 +28,7 @@ export default class extends React.Component {
             paddingBottom:'10px',
             fontSize:'16px',
             color :'#333333',
+            padding: '0px',
         }
     
       
@@ -35,8 +37,9 @@ export default class extends React.Component {
      array.map((bullet,index) =>
       
           <li style = {styles}>
-            {bullet}
+               <ReactMarkdown  source={bullet} /> 
           </li>
+            
       
     ))
     }else{
@@ -47,6 +50,7 @@ export default class extends React.Component {
 
 
   render() {
+    
     const { content } = this.props
     var bullets = String(content.bullets)
     console.log(bullets)
