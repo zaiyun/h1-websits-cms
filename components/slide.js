@@ -1,49 +1,79 @@
 import React from 'react'
-import SbEditable from 'storyblok-react';
-
+import Components from './index'
+import SbEditable from 'storyblok-react'
 
 export default class extends React.Component {
-  resizedIcon(index) {
-    const { content } = this.props
-    if (typeof content.image !== 'undefined') {
-      return content.image.replace('//img2.storyblok.com/120x120', '//a.storyblok.com')
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentSlide: 0
+    }
+  }
+
+  slide() {
+    let slides = this.props.content.body.filter((slide, index) => {
+      return this.state.currentSlide === index
+    })
+    if (slides.length) {
+      return slides[0]
     }
     return null
   }
-  
-  render(){
-    const { content } = this.props
-    return(
-  <SbEditable content={content}>
-    <div className="slide">
-      <img src={content.image} />
-    
-      <style jsx>{`
-        .slide{
-          
-        }
-        .slide img {
-          opacity: 0.8;
-          display: block;
-          margin-top: ${content.top_margin};
-          margin-bottom:${content.bottom_margin};
-          margin-left: ${content.left_margin};
-          margin-right: ${content.right_margin};
-          text-align:center;
-          width: ${content.width};
-          
-          max-height: 700px;
-          vertical-align:middle
-          
 
-        }
-       
-         
-        
-        
-      `}</style>
-    </div>
-  </SbEditable>
+  pagClass(index) {
+    return 'teaser__pag-dot ' + (index == this.state.currentSlide ? 'teaser__pag-dot--current' : '')
+  }
+
+  handleDotClick(index) {
+    this.setState({
+      currentSlide: index
+    })
+  }
+
+  render() {
+    const { content } = this.props
+    return (
+      <SbEditable content={content}>
+        <div className="teaser">
+          {this.slide() ? Components(this.slide()) : ''}
+          <div className="teaser__pag">
+            {content.body.map((blok, index) =>
+              <button key={index} onClick={() => this.handleDotClick(index)}
+                className={this.pagClass(index)}>Next</button>
+            )}
+          </div>
+
+          <style jsx>{`
+          .teaser{
+            padding-top: ${content.top_margin};
+          
+          }
+            .teaser__pag {
+              width: 100%;
+              text-align: center;
+             
+            }
+
+            .teaser__pag-dot {
+
+              text-indent: -9999px;
+              border: 0;
+              border-radius: 50%;
+              width: 11px;
+              height: 11px;
+              padding: 0;
+              margin: 0px 3px;
+              background-color: #D8D8D8;
+              -webkit-appearance: none;
+              cursor: pointer;
+            }
+
+            .teaser__pag-dot--current {
+              background-color: #8D8D8D;
+            }
+          `}</style>
+        </div>
+      </SbEditable>
     )
   }
 }
