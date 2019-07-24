@@ -64,11 +64,10 @@ render(){
         background-color:#000;
       }
       
-      .a{
-        text-decoration: none;
-      }
+      
 
-      .lm{ 
+      .lm { 
+        color:#0AAACD;
         font-family: Montserrat;
         font-size: 14px;
         font-weight: 600;
@@ -76,11 +75,19 @@ render(){
         line-height: 18px;
         text-align: center;
         padding:20px;
-        color: #0AAACD; 
+        
       }
 
-      .lm:hover {
-        text-decoration:underline;
+      .a {
+        color:#0AAACD;
+        text-decoration:none;
+      }
+
+      
+      .a:hover {
+        border-color:#0AAACD;
+        border-bottom: 2px solid;
+        
       }
 
       .hr{
