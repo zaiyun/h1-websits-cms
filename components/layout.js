@@ -5,35 +5,39 @@ import Footer from '../components/footer'
 <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"></link>
 import StoryblokService from '../utils/storyblok-service'
 
-export default ({ children, settings = {} }) => (
+export default ({ children, settings = {}, color }) => (
+
   <div>
     <Head />
-    <Nav settings={settings} />
+    <Nav settings={settings} co = {color}/>
 
-    <div className="util__container">
-      {children}
-    </div>
+      <div className="util__container">
+        {children}
+      </div>
     <Footer settings={settings}/>
     <style jsx global>{`
       article, aside, footer, header, hgroup, main, nav, section {
         display: block;
+        background-color:${color};
+        
       }
 
       body {
         font-family: 'Montserrat', sans-serif;
         line-height: 1;
-        font-size: 18px;
+        
         color: #000;
         margin: 0;
         padding: 0;
       }
 
       .util__flex {
-        
         display: flex;
         justify-content: center;
         padding-top: 25px;
         padding-bottom: 25px;
+        margin:auto;
+        flex-wrap: wrap;
 
       }
 

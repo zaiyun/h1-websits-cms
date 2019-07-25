@@ -30,9 +30,9 @@ class Dropdown extends React.Component {
       }
     
       render() {
-          
+        const color= this.props.color;
         return (
-            <div  className="dropdown" onMouseOver={this.showDropdownMenu} >
+            <div  className="dropdown" onMouseOver={this.showDropdownMenu}  >
              <div className="button" > {this.props.name} </div>
                 
               { this.state.displayMenu ? (
@@ -66,13 +66,7 @@ class Dropdown extends React.Component {
             top:27px;
             right:0px;
             width: 100%;
-            background-color: #3b3e74;
-            
-            
-            font-family: 'Montserrat', sans-serif;
-            font-size: 14px;
-           
-            line-height: 18px;
+            background-color: #3b3e74; 
             position: absolute;
             z-index: 1;
        }
@@ -99,10 +93,8 @@ class Dropdown extends React.Component {
             padding-right:10px;
             width:120px;
             height:auto;
-            background-color: #060464;
             border-radius:0px;
-            font-family: 'Montserrat', sans-serif;
-            color:white;
+            color:${color};
        }
         .button:before{
             content:"";
@@ -110,9 +102,9 @@ class Dropdown extends React.Component {
             width:0px;
             height:0px;
             border: 7px solid;
-            border-color: white transparent transparent transparent;
-            right:10px;
-            top:10px;
+            border-color: ${color} transparent transparent transparent;
+            right:27px;
+            top:7px;
             
        }
        .button:hover{

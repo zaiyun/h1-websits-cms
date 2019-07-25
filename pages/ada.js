@@ -15,7 +15,7 @@ export default class extends React.Component {
     StoryblokService.setQuery(query)
 
     let [page, settings] = await Promise.all([
-      StoryblokService.get('cdn/stories/home'),
+      StoryblokService.get('cdn/stories/ada'),
       StoryblokService.get('cdn/stories/settings')
     ])
 
@@ -33,7 +33,7 @@ export default class extends React.Component {
     const { settings } = this.props
     const { pageContent } = this.state
     return (
-      <Layout settings={settings.data.story}  color = {pageContent.nav_color}>
+      <Layout settings={settings.data.story} color = {pageContent.nav_color}>
         {Components(pageContent)}
       </Layout>
     )

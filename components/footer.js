@@ -63,7 +63,7 @@ export default class extends React.Component {
             position: relative;
             color: #FFFFFF;
             height: 50%;
-            margin-left:10%;
+            margin-left:3%;
             width:auto;
             border-collapse:collapse;
             }
@@ -91,6 +91,7 @@ export default class extends React.Component {
           }
         }
       .table-row{
+          cursor: pointer;
           color: #DEDEDE;
           padding-right:100px;
           margin-top:12px;

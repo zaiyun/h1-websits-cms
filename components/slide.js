@@ -49,20 +49,26 @@ export default class extends React.Component {
           
           }
             .teaser__pag {
+             
               width: 100%;
               text-align: center;
-             
+            
             }
-
+            button:focus {
+              outline:0;
+            }
             .teaser__pag-dot {
+              vertical-align: text-bottom;
 
               text-indent: -9999px;
-              border: 0;
+              border: none;
               border-radius: 50%;
               width: 11px;
               height: 11px;
               padding: 0;
+              
               margin: 0px 3px;
+             
               background-color: #D8D8D8;
               -webkit-appearance: none;
               cursor: pointer;

@@ -30,7 +30,7 @@ export default class extends React.Component {
             color :'#333333',
             padding: '0px',
         }
-    
+        
       
     if(bool == true){
     return(
@@ -97,7 +97,6 @@ export default class extends React.Component {
             
 
             .detail ul li::before{
-                
                 content:"•";
                 font-size: 30px;
                 color: #060464;
@@ -115,7 +114,7 @@ export default class extends React.Component {
 
             
             .detail h2{ 
-                
+              color:#333333;
               font-size: 18px;
               font-weight: bold;
               line-height: 22px;

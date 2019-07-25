@@ -31,7 +31,7 @@ export default class extends React.Component {
           margin-right: ${content.right_margin};
           text-align:center;
           width: ${content.width};
-          
+          opacity: ${content.opacity};
           max-height: 700px;
           vertical-align:middle
           
